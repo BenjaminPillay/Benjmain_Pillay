@@ -21,7 +21,14 @@ namespace Benjmain_Pillay
         private void button1_Click(object sender, EventArgs e)
         {
 
-            
+            StreamReader sr = new StreamReader("Text.txt");
+            string Line;
+            int counter = 0;
+            while ((Line=sr.ReadLine())!=null)
+            {
+                listBox1.Items.Add(Line);
+                counter++;
+            }
 
 
         }
